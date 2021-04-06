@@ -1,0 +1,74 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Login para varios usuario</title>
+  </head>
+
+  <body>
+    <h1>Ingresa Tus Datos </h1>
+    <form name="login">
+         <table width="200" border="0">
+           <tr>
+             <th scope="row"><h2>Usuario</h2></th>
+             <td><span class="cnt">
+               <input name="usuario" type="text" class="Input" value="" size="20" />
+             </span></td>
+           </tr>
+           <tr>
+             <th height="33" scope="row"><h2>Clave</h2></th>
+             <td><span class="cnt">
+               <input name="password" type="password" class="Input" value="" size="20" />
+             </span></td>
+             <td><span class="cnt">
+               <input value="Entrar" target="_parent" onclick="Login()" type="button" class="boton"/>
+             </span></td>
+           </tr>
+           <tr>
+             <th scope="row"><input type="reset" name="Borrar" id="Borrar" value="Reset" class="boton" /></th>
+           </tr>
+         </table>
+    </form>
+
+    <script>
+      var intentos_global = 3;
+      var tiempo_espera = 0;
+
+      function verificar_tiempo(){
+        if (tiempo_espera==0) {
+          Login();
+        }else {
+
+          var intentos_global = 3;
+          var tiempo_espera = 0;
+        }
+      }
+
+      function Login(){
+        var usuario=document.login.usuario.value;
+        var password=document.login.password.value;
+        //(usuario=="erizo" && password=="bad")||
+        if((usuario=="USUARIO1" && password=="FORMULARIO" && intentos_global>0)) {
+          window.location="Doc.html";
+        }else if(intentos_global<0) {
+          var espera_variable;
+          tiempo_espera = 10000;
+          alert("Tiene que esperar 10 segundos.");
+          espera_variable = setTimeout(funvacia,tiempo_espera);
+        }else{
+          alert("Usuario o contraseña incorrectos, le quedan "+intentos_global+" intentos.");
+          intentos_global--;
+        }
+      }
+
+      function funvacia(){
+        intentos_global = 3;
+        tiempo_espera = 0;
+      }
+    </script>
+
+    <!-- Inicio comentario
+      document.oncontextmenu = function(){return false}
+    Fin comentario -->
+  </body>
+</html>

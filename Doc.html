@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <title>Formulario</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <style type="text/css">
+            .justify 
+            {
+                text-align: justify;
+                text-justify: inter-word;
+            }
+            .p-text
+            {
+                font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+                font-size:12px;
+                margin: 0 0 12.5px;
+            }
+            .bold
+            {
+                font-weight:bold;
+            }
+            .center
+            {
+                text-align:center;
+            }
+            .under
+            {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- INFORMATION -->
+            <div class="row" style="background: #0d2c1a;">
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <!-- AQUI -->
+                    <img src="Gobierno.png" style="width: 100%;height: 170px;">
+                </div> 
+                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                    <center><h1 style="color: white;margin-top:55px;">PROGRAMA SEMBRANDO VIDA</h1></center> 
+                </div> 
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="background: #3e684f;height: 30px;">  
+                </div> 
+            </div> 
+           
+            <div class="row" >
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <p class="bold" style="font-size:38px;"> ¿De que se trata? </p><br>
+                    <p class="justify" style="font-size:23px;">
+                        En Sembrando Vida trabajamos por convertir 
+                        los ejidos y comunidades en un sector estratégico 
+                        para el desarrollo del campo mexicano, trabajando
+                        juntos para incrementar la productividad de zonas 
+                        rurales, bajo un enfoque de sustentabilidad y desarrollo
+                        regional a corto, mediano y largo plazo, que contribuya 
+                        a reducir la vulnerabilidad en la que viven los campesinos
+                        de estas regiones.
+                    </p>
+                </div> 
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <img src="SemVida.jpg" style="margin-left: 30px;width: 80%;height: 210px;">
+                </div> 
+            </div><br/><br/><br/> 
+            <div class="row" >
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <p class="justify" style="font-size:23px;">
+                        El programa, busca atender dos problemáticas: la pobreza
+                        rural y la degradación ambiental. De esta manera, sus 
+                        objetivos son rescatar al campo, reactivar la economía local 
+                        y la regeneración del tejido social en las comunidades
+                    </p>
+                </div> 
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <img src="Rep.jpg" style="margin-left: 30px;margin-top: -20px; width: 80%;height: 210px;">
+                </div> 
+            </div> <br/><br/><br/> 
+        <!-- INFORMATION -->
+        <!-- FORM -->
+            <div class="row" >
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="background: #3e684f;height: 40px;">
+                     <center><h3 style="color: white;">¿Cómo inscribirse?</h3></center> 
+                </div> 
+            </div><br>
+
+            <div class="row" >
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                </div> 
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <form id="contactform" action="correo.php" name="contactform" method="POST">
+                        <font color="green">  <p>  Nombre completo: <input type="text" name="nombre_completo"></p> 
+                        <font color="green"> <p>Fecha de nacimiento: <input type="date" name="fecha" value=""></p> </font>
+                        <p>
+                            Sexo: 
+                            <select class="formato" name="sexo_1">
+                                <option>Femenino</option>
+                                <option>Masculino</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            Ultimo grado de estudios <br>
+                            <select class="formato" name="estudios_1" size="6">
+                                <option>Secundaria</option>
+                                <option>Preparatorio</option>
+                                <option>Carrera técnica</option>
+                                <option>Universidad</option>
+                                <option>Maestria</option>
+                                <option>Doctorado</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            ¿Qué carrera cursaste? <br>
+                            <select class="formato" name="carrera_opciones">
+                                <option>Diseño y animación</option>
+                                <option>Matematicas, ciencias o ingenieria</option>
+                                <option>Administración</option>
+                                <option>Relaciones comerciales</option>
+                                <option>Filosofía</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            ¿Qué semestre estas cursando? <br>
+                            <select class="formato" name="semestre_1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>No aplica</option>
+                                <option>Graduado</option>
+                                <option>Sin especificar</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            ¿A qué te dedicas actualmente?<br>
+                            <select class="formato" name="ocupacion_1">
+                                <option>Estudiante</option>
+                                <option>Trabajo</option>
+                                <option>Ocupación en el hogar</option>
+                                <option>Nada</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            Quiero ayudar a: (Seleccione todas las que guste) <br>
+                            <input type="checkbox" name="ayuda_opciones" value="1">Niños y jóvenes<br>
+                            <input type="checkbox" name="ayuda_opciones" value="2">Eduación<br>
+                            <input type="checkbox" name="ayuda_opciones" value="3">Animales<br>
+                            <input type="checkbox" name="ayuda_opciones" value="4">Medio ambiente<br>
+                            <input type="checkbox" name="ayuda_opciones" value="5">Comunidades vulnerables<br>
+                            <input type="checkbox" name="ayuda_opciones" value="6">Salud<br>
+                            <input type="checkbox" name="ayuda_opciones" value="7">Arte y cultura<br>
+                            <input type="checkbox" name="ayuda_opciones" value="8">Adulto mayor<br>
+                            <input type="checkbox" name="ayuda_opciones" value="9">Alimentos<br>
+                            <input type="checkbox" name="ayuda_opciones" value="10">Comercio local<br>
+                            <input type="checkbox" name="ayuda_opciones" value="11">Apoyo emocional<br>
+                            <input type="checkbox" name="ayuda_opciones" value="">COVID<br>
+                        </p>
+
+                        <p>
+                            ¿En que entidad vives? <br>
+                            <select class="formato" name="entidad_1" size="3">
+                                <option>Ciudad de México</option>
+                                <option>Estado de México</option>
+                                <option>Aguascalientes</option>
+                                <option>Baja California</option>
+                                <option>Baja California Sur</option>
+                                <option>Campeche</option>
+                                <option>Chiapas</option>
+                                <option>Chihuahua</option>
+                                <option>Coahuila de Zaragoza</option>
+                                <option>Colima</option>
+                                <option>Durango</option>
+                                <option>Guanajuato</option>
+                                <option>Guerrero</option>
+                                <option>Hidalgo</option>
+                                <option>Jalisco</option>
+                                <option>Michoacán de Ocampo</option>
+                                <option>Morelos</option>
+                                <option>Nayarit</option>
+                                <option>Nuevo León</option>
+                                <option>Oaxaca</option>
+                                <option>Puebla</option>
+                                <option>Querétaro</option>
+                                <option>Quintana Roo</option>
+                                <option>San Luís Potosí</option>
+                                <option>Sinaloa</option>
+                                <option>Sonora</option>
+                                <option>Tabasco</option>
+                                <option>Tamaulipas</option>
+                                <option>Tlaxcala</option>
+                                <option>Veracruz de Ignacio de la Llave</option>
+                                <option>Yucatán</option>
+                                <option>Zacatecas</option>
+                            </select>
+                        </p>
+                        
+                        <p>Correo de contacto <input type="email" name="email_1" value=""></p>
+                        <input type="submit" name="btn_enviar" value="Enviar">
+                    </form>
+                </div> 
+            </div> 
+        <!-- FORM -->
+    </body>
+</html>
